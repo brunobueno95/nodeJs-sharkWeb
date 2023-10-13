@@ -25,7 +25,7 @@ export const deleteSharkById = (id: string) =>
 
 
   export const updateSharkById = async (id: string, updatedValues: Record<string, any>) => {
-    // Use findOneAndUpdate to find the shark by its ID and update its values
+
     return SharkModel.findOneAndUpdate(
       { _id: id },
       { $set: updatedValues },
