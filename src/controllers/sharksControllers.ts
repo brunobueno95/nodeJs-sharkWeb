@@ -106,12 +106,12 @@ export const updateShark = async (req: express.Request, res: express.Response) =
       return res.status(404).json({ error: "Shark not found" });
     }
 
-    // Respond with success status and the updated shark
+
     res.status(200).json({ message: "Shark updated successfully", shark: updatedSharkResult });
   } catch (error) {
     console.error('Error updating shark:', error.message);
 
-    // Respond with an appropriate error status and message
+ 
     res.status(500).json({ error: `Failed to update shark: ${error.message}` });
   }
 };
