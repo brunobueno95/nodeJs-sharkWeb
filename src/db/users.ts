@@ -12,16 +12,16 @@ export const authenticateUser = async (userName: string, password: string) => {
     const user = await UserModel.findOne({ userName });
 
     if (!user) {
-      return null; // User not found
+      return null; 
     }
 
     const isPasswordValid = user.password === password;
 
     if (!isPasswordValid) {
-      return null; // Password does not match
+      return null; 
     }
 
-    return user; // User authenticated successfully
+    return user; 
   } catch (error) {
     throw error;
   }
